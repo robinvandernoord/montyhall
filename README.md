@@ -17,10 +17,10 @@ Running this simulation shows that indeed, switching leads to ~ 2x more wins.
 
 ### 100.000 runs
 
-- Python: ~ 0.3 seconds for each 1M
+- Python: ~ 0.3 seconds for each 100k
 - Numba: ~ 1.5 seconds BUT only 0.08 on the next 100k. This shows that it takes some time for the compilation to
   complete, but the compiled code is much faster.
-- Numpy[^*]: ~ 2.8 seconds for each 1M
+- Numpy[^*]: ~ 2.8 seconds for each 100k
 
 ### 1.000.000 runs of the simulation
 
