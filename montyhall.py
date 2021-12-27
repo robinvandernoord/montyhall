@@ -78,7 +78,7 @@ def montyhall():
     return win, switch
 
 
-def main(n=1_000_000):
+def main(n):
     scores = defaultdict(int)
 
     for _ in range(n):
@@ -94,11 +94,13 @@ def print_scores(scores):
 
 
 if __name__ == '__main__':
+    n = int(sys.argv[1]) if sys.argv[1:] else 1_000_000
+
     print("first:")
     s = time.time()
-    print_scores(main())
+    print_scores(main(n))
     print("took", time.time() - s)
     print("additional")
     s = time.time()
-    main()
+    main(n)
     print("took", time.time() - s)
